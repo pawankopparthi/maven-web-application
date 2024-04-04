@@ -146,6 +146,41 @@
 					<wtpContextName>maven-web-application</wtpContextName>
 				</configuration>
 			</plugin>
+			<plugin>
+	
+     <groupId>org.sonarsource.scanner.maven</groupId>
+	
+     <artifactId>sonar-maven-plugin</artifactId>
+	
+     <version>3.9.1.2184</version>
+<!-- Use the latest version -->
+	
+        <executions>
+	
+           <execution>
+	
+              <phase>verify</phase>
+	
+                    <goals>
+	
+                      <goal>sonar</goal>
+	
+                     </goals>
+	
+             </execution>
+	
+             </executions>
+	
+         <configuration>
+	
+            <sonar.host.url>https://localhost:9000</sonar.host.url>
+	
+            <sonar.login>squ_123e5e7d73000c424b28fe83f6da190911283cfa</sonar.login>
+<!-- Use the Jenkins environment variable here -->
+	
+              </configuration>
+	
+                </plugin>   
 			
 </plugins>
 	</build>
